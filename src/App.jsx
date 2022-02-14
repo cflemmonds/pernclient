@@ -1,8 +1,10 @@
 import React, { Component, useState, useEffect } from 'react';
-import { Navbar } from 'reactstrap';
 import Sitebar from './site/navbar/Navbar';
+import "bootstrap/dist/css/bootstrap.css";
+import "./App.css";
+import Auth from "./components/Auth/Auth";
 
-import './App.css';
+
 
 function App() {
   const [sessionToken, setSessionToken] = useState('');
@@ -25,9 +27,10 @@ function App() {
 
 return (
   <div>
+    <h1>Welcome to Firelogger</h1>
+    <Auth updateLocalStorage={updateLocalStorage} />
     <Sitebar clickLogout={logout}/>
   </div>
 );
 }
-
 export default App;

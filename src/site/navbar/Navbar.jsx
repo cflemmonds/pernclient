@@ -3,7 +3,8 @@ import { Button, Collapse, Navbar, NavbarToggler, Nav, NavItem } from 'reactstra
 
 const Sitebar = (props) => {
     return ( 
-        <div>hiya
+        <div>
+            <h1></h1>
             <Button onClick={props.clickLogout}>Logout</Button>
         </div>
      );
