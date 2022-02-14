@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import Auth from "./components/Auth/Auth";
+import PropertyIndex from "./components/Property/PropertyIndex"
 
-const App = (props)=> {
+const App = ()=> {
   const [sessionToken, setSessionToken] = useState("");
 
   useEffect(() => {
@@ -20,16 +21,18 @@ const App = (props)=> {
   };
   
 
-  const clearLocalStorage = () => {
-    localStorage.clear();
-    setSessionToken("");
-  };
+  // const clearLocalStorage = () => {
+  //   localStorage.clear();
+  //   setSessionToken("");
+  // };
 
+  const protectedPages = () => {
+    return (sessionToken === localStorage.getItem('token') ? <PropertyIndex token={sessionToken}/> : <Auth updateLocalStorage={updateLocalStorage}/>)
+  }
   return (
     <div className="App">
       <h1>Welcome to Firelogger</h1>
-
-      <Auth updateLocalStorage={updateLocalStorage} />
+      {protectedPages()}
     </div>
   );
 }
