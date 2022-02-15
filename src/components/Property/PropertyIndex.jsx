@@ -9,7 +9,7 @@ const PropertyIndex = (props) => {
     const [updateActive, setUpdateActive] =useState(false);
     const [propertyToUpdate, setPropertyToUpdate] = useState({});
     const fetchProperty = () => {
-        fetch('http://localhost:4000/property/get', {        
+        fetch(`http://localhost:4000/property/ownerID`, {        
         method: 'GET',
         headers: new Headers ({
             'Content-Type': 'application/json',
