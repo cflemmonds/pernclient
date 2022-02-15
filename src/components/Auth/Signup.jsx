@@ -60,6 +60,7 @@ const Signup = (props) => {
           value={password}
           placeholder="Enter a password"
           onChange={(e) => setPassword(e.target.value)}
+          minLength={5}
         />
         <br />
         <button type="submit" onSubmit={handleSubmit}>Submit Signup</button>
