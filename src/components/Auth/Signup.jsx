@@ -22,6 +22,17 @@ const Signup = (props) => {
       .catch((err) => console.error(err));
   }
 
+  function ValidateEmail(mail) 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(Signup.emailAddr.value))
+  {
+    return (true)
+  }
+    alert("You have entered an invalid email address!")
+    return (false)
+}
+
+
   return (
     <div>
       <h1>Signup</h1>
@@ -46,7 +57,7 @@ const Signup = (props) => {
         <br />
         <label htmlFor="email">Email</label>
         <input
-          type="text"
+          type="email"
           id="email"
           value={email}
           placeholder="Enter an email address"
@@ -63,7 +74,7 @@ const Signup = (props) => {
           minLength={5}
         />
         <br />
-        <button type="submit" onSubmit={handleSubmit}>Submit Signup</button>
+        <button type="submit" onSubmit={handleSubmit, ValidateEmail}>Submit Signup</button>
       </form>
     </div>
   );

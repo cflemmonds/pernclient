@@ -24,6 +24,7 @@ const Login = (props) => {
   return (
     <div>
       <form>
+        <h1>Login</h1>
         <br />
         <label htmlFor="email">Email</label>
         <br />
