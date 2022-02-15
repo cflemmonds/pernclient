@@ -16,7 +16,6 @@ const Login = (props) => {
       .then((res) => res.json())
       .then((data) => {
         props.updateLocalStorage(data.sessionToken);
-        console.log(data);
       })
 
       .catch((err) => console.error(err));

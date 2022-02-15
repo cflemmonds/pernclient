@@ -1,6 +1,49 @@
 .App {
   text-align: center;
+  background-color: #b3b3b3;
 }
 
+.title {
+  color: #8c0e1c;
+  text-align: center;
+  font-size: 2.5em;
+}
 
+.logo {
+  width: 100px;
+  height: 100px;
+}
 
+Table th{
+  border: 1px black solid;
+}
+Table td{
+  border: 1px black solid;
+}
+
+tr:nth-child(odd) {
+  background-color: #8c8c8c;
+  }
+
+tr:nth-child(even) {
+  background-color: #e6e6e6;
+}
+
+thead {
+  background-color: #262626;
+  color:#ff0000;
+  border: solid 2px black;
+}
+
+.edit {
+  background-color: #8c0000;
+  font-weight: bold;
+
+}
+
+.delete {
+  background-color: #ff8cb3;
+  font-weight: bold;
+  color: black
+
+}

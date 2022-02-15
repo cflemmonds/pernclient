@@ -25,8 +25,8 @@ const PropertyTable = (props) => {
                     <td>{property.imageURL}</td>
                     <td>{property.value}</td>
                     <td>
-                        <Button color='warning' onClick={() => {props.editUpdateProperty(property); props.updateOn()}}>Update</Button>
-                        <Button color='danger' onClick={() => {deleteProperty(property)}}>Delete</Button>
+                        <Button className='edit' onClick={() => {props.editUpdateProperty(property); props.updateOn()}}>Edit</Button>
+                        <Button className='delete' onClick={() => {deleteProperty(property)}}>Delete</Button>
                     </td>
                 </tr>
             )
@@ -36,9 +36,8 @@ const PropertyTable = (props) => {
         <>
         <h3>Property History</h3>
         <hr/>
-        <Table striped>
+        <Table>
             <thead>
-                <tr>
                     <th>#</th>
                     <th>Category</th>
                     <th>Name</th>
@@ -47,7 +46,7 @@ const PropertyTable = (props) => {
                     <th>Serial</th>
                     <th>Image</th>
                     <th>Value</th>
-                </tr>
+                    <th></th>
             </thead>
             <tbody>
                 {propertyMapper()}

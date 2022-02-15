@@ -1,30 +1,22 @@
 import React, { useState } from 'react';
 import { Button, Collapse, Navbar, NavbarBrand, NavbarToggler, Nav, NavItem } from 'reactstrap'
-import PropertyCreate from '../../components/Property/PropertyCreate';
+import fireLogger from "../Assets/fireLogger.png"
 
 
 const Sitebar = (props) => {
-    const [createActive, setCreateActive] =useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => {
         let newIsOpen = !isOpen;
         setIsOpen(newIsOpen);
     }
 
-    const createOn = () => {
-        setCreateActive(true);
-    }
-    
-    const createOff = () => {
-        setCreateActive(false);
-    }
-
     return (    
-        <Navbar color='faded' light expand='md'>
-            <NavbarBrand href='/'>FireLogger</NavbarBrand>
+        <Navbar light>
+            <img src={fireLogger} alt="Firelogger Logo" className='logo'/>
+            <NavbarBrand className="title">FireLogger</NavbarBrand>
             <NavbarToggler onClick={toggle}/>
             <Collapse isOpen={isOpen} navbar>
-                <Nav className='ml-auto' navbar>
+                <Nav className='nav' navbar>
                     <NavItem>
                         <Button onClick={props.clickLogout}>Logout</Button>
                     
