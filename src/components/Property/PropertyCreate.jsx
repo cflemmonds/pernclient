@@ -48,7 +48,7 @@ const PropertyCreate = (props) => {
   };
   return (
     <Modal isOpen={true}>
-      <ModalHeader toggle={toggle}>Create a New Property
+      <ModalHeader toggle={handleSubmit}>Create a New Property
       </ModalHeader>
       <ModalBody>
         <Form onSubmit={handleSubmit}>
@@ -59,11 +59,11 @@ const PropertyCreate = (props) => {
             onChange={(e) => setCategory(e.target.value)}
           >
             <option>Category</option>
-            <option value="electronics">Electronics</option>
-            <option value="jewelry">Jewelry</option>
-            <option value="furs">Furs</option>
-            <option value="art">Art</option>
-            <option value="antiques">Antiques</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Jewelry">Jewelry</option>
+            <option value="Furs">Furs</option>
+            <option value="Art">Art</option>
+            <option value="Antiques">Antiques</option>
           </Input>
           <Input
             type="text"
@@ -102,12 +102,13 @@ const PropertyCreate = (props) => {
 
           <Input
             type="text"
-            placeholder="value"
+            placeholder="Value"
             value={value}
             onChange={(e) => setValue(e.target.value)}
           />
           <br />
           <Button type="submit">Click to Submit</Button>
+          <Button type='reset' onClick={handleSubmit}>Close</Button>
         </Form>
       </ModalBody>
     </Modal>

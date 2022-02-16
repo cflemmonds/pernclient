@@ -9,9 +9,9 @@ const Signup = (props) => {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch('http://localhost:4000/user/register', {
+    fetch("http://localhost:4000/user/register", {
       method: "POST",
-      body: JSON.stringify ({firstName, lastName, email, password}),
+      body: JSON.stringify({ firstName, lastName, email, password }),
       headers: new Headers({
         "Content-Type": "application/json",
       }),
@@ -61,7 +61,9 @@ const Signup = (props) => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <br />
-        <button type="submit" onSubmit={handleSubmit}>Submit Signup</button>
+        <button type="submit" onSubmit={handleSubmit}>
+          Submit Signup
+        </button>
       </form>
     </div>
   );
