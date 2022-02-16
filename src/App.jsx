@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import Auth from "./components/Auth/Auth";
 import PropertyIndex from "./components/Property/PropertyIndex"
+import Uploading from './Uploading';
 
 
 const App = ()=> {
@@ -31,6 +32,7 @@ const App = ()=> {
     <div className="App">
       <h1>Welcome to Firelogger</h1>
       {protectedPages()}
+      <Uploading />
       <Sitebar clickLogout={logout}/>
     </div>
   );
