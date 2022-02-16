@@ -23,8 +23,8 @@ const Login = (props) => {
   }
   return (
     <div>
-      <h1>Hello from Login</h1>
       <form>
+        <h1>Login</h1>
         <br />
         <label htmlFor="email">Email</label>
         <br />
