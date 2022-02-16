@@ -1,12 +1,21 @@
-import React from 'react'
+import React from "react";
 import Login from "./Login";
 import Signup from "./Signup";
 
 const Auth = (props) => {
   return (
     <div>
-      <Signup updateLocalStorage={props.updateLocalStorage}/>
-      <Login updateLocalStorage={props.updateLocalStorage}/>
+      <h1 className="title">FireLogger</h1>
+<br />
+      <br />
+      <br />
+      <br />
+      <div className="splash">
+      <Signup updateLocalStorage={props.updateLocalStorage} />
+      <br />
+
+      <Login updateLocalStorage={props.updateLocalStorage} />
+    </div>
     </div>
   );
 };
