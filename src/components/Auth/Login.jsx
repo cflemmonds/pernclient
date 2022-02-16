@@ -24,10 +24,10 @@ const Login = (props) => {
     <div>
       <form>
         <h1>Login</h1>
-        <br />
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">Email Address</label>
         <br />
         <input
+        placeholder="Email Address"
           type="text"
           id="email"
           value={email}
@@ -39,6 +39,7 @@ const Login = (props) => {
         <label htmlFor="password">Password</label>
         <br />
         <input
+        placeholder="Password"
           type="text"
           id="password"
           value={password}

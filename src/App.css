@@ -14,6 +14,18 @@
   height:100%;
 }
 
+.splash {
+  left: 39%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #e6e6e6; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#8c0e1c, #f7b602);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  width:100%;
+  height:100%;
+  color: black;
+}
+
 .navbar {
   text-align: center;
   position: relative;
