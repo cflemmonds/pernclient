@@ -1,5 +1,5 @@
 import React from "react";
-import { Table, Button } from "reactstrap";
+import { Table } from "reactstrap";
 
 const PropertyTable = (props) => {
   const deleteProperty = (property) => {
@@ -21,7 +21,7 @@ const PropertyTable = (props) => {
           <td>{property.year}</td>
           <td>{property.model}</td>
           <td>{property.serial}</td>
-          <td>{property.imageURL}</td>
+          <td>{property.image}</td>
           <td>{property.value}</td>
           <td className="btns">
             <button

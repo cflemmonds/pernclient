@@ -8,7 +8,6 @@ const PropertyCreate = (props) => {
   const [year, setYear] = useState("");
   const [model, setModel] = useState("");
   const [serial, setSerial] = useState("");
-  const [imgURL, setImgURL] = useState("");
   const [value, setValue] = useState("");
   const [image, setImage] = useState("");
 
@@ -37,7 +36,6 @@ const PropertyCreate = (props) => {
         setYear("");
         setModel("");
         setSerial("");
-        setImgURL("");
         setValue("");
         props.createOff()
         props.fetchProperty()
