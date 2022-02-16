@@ -32,7 +32,6 @@ const App = ()=> {
     <div className="App">
       <h1>Welcome to Firelogger</h1>
       {protectedPages()}
-      <Uploading />
       <Sitebar clickLogout={logout}/>
     </div>
   );

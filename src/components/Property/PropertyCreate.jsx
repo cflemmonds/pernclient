@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import { APIURL, EndPoints } from "../../endpoints";
 import { Input, Button, Form } from "reactstrap";
+import Uploading from "../../Uploading";
 
 const PropertyCreate = (props) => {
     const [category, setCategory] = useState("");
@@ -10,6 +11,8 @@ const PropertyCreate = (props) => {
     const [serial, setSerial] = useState("");
     const [imgURL, setImgURL] = useState("");
     const [value, setValue] = useState("");
+
+    const [image, setImage] = useState("");
 
   const handleSubmit =(event) => {
     event.preventDefault();
@@ -21,7 +24,7 @@ const PropertyCreate = (props) => {
         year: year,
         model: model,
         serial: serial,
-        imgURL: imgURL,
+        imgURL: image,
         value: value,
     }),
       headers: new Headers({
@@ -36,7 +39,7 @@ const PropertyCreate = (props) => {
         setYear('')
         setModel('')
         setSerial('')
-        setImgURL('')
+        setImage('')
         setValue('')
         props.fetchProperty()
       })
@@ -85,12 +88,12 @@ const PropertyCreate = (props) => {
           onChange={(e) => setSerial(e.target.value)}
         />
 
-        <Input
+        {/* <Input
           type="text"
           placeholder="Image"
           value={imgURL}
           onChange={(e) => setImgURL(e.target.value)}
-        />
+        /> */}
 
         <Input
           type="text"
@@ -107,6 +110,7 @@ const PropertyCreate = (props) => {
         /> */}
 
         <br />
+        <Uploading image={image} setImage={setImage}/>
         <Button type="submit">Click to Submit a Property</Button>
       </Form>
     </div>

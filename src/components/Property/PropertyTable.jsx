@@ -22,7 +22,7 @@ const PropertyTable = (props) => {
                     <td>{property.year}</td>
                     <td>{property.model}</td>
                     <td>{property.serial}</td>
-                    <td>{property.imageURL}</td>
+                    <td><img src={property.imgURL} /></td>
                     <td>{property.value}</td>
                     <td>
                         <Button color='warning' onClick={() => {props.editUpdateProperty(property); props.updateOn()}}>Update</Button>
