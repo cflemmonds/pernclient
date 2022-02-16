@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-// import { APIURL, EndPoints } from "../../endpoints";
 import { Input, Button, Form, Modal, ModalHeader, ModalBody } from "reactstrap";
-
+import Uploading from "../../Uploading";
 
 const PropertyCreate = (props) => {
   const [category, setCategory] = useState("");
@@ -11,10 +10,9 @@ const PropertyCreate = (props) => {
   const [serial, setSerial] = useState("");
   const [imgURL, setImgURL] = useState("");
   const [value, setValue] = useState("");
-  const [modal, setModal] = useState(false);
-  const toggle = () => setModal(!modal)
+  const [image, setImage] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit =(event) => {
     event.preventDefault();
     fetch("http://localhost:4000/property/create", {
       method: "POST",
@@ -24,7 +22,7 @@ const PropertyCreate = (props) => {
         year: year,
         model: model,
         serial: serial,
-        imgURL: imgURL,
+        imgURL: image,
         value: value,
       }),
       headers: new Headers({
@@ -93,12 +91,6 @@ const PropertyCreate = (props) => {
             onChange={(e) => setSerial(e.target.value)}
           />
 
-          <Input
-            type="text"
-            placeholder="Image"
-            value={imgURL}
-            onChange={(e) => setImgURL(e.target.value)}
-          />
 
           <Input
             type="text"
@@ -106,7 +98,19 @@ const PropertyCreate = (props) => {
             value={value}
             onChange={(e) => setValue(e.target.value)}
           />
-          <br />
+
+
+        {/* <Input
+          type="text"
+          placeholder="Image"
+          value={imgURL}
+          onChange={(e) => setImgURL(e.target.value)}
+        /> */}
+
+
+        <br />
+        <Uploading image={image} setImage={setImage}/>
+        <br />
           <Button type="submit">Click to Submit</Button>
           <Button type='reset' onClick={handleSubmit}>Close</Button>
         </Form>

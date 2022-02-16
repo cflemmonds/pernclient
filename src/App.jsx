@@ -2,7 +2,8 @@ import React, { Component, useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 import Auth from "./components/Auth/Auth";
-import PropertyIndex from "./components/Property/PropertyIndex";
+import PropertyIndex from "./components/Property/PropertyIndex"
+
 
 const App = () => {
   const [sessionToken, setSessionToken] = useState("");
