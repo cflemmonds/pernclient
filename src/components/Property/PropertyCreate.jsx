@@ -108,8 +108,8 @@ const PropertyCreate = (props) => {
 
         <Uploading image={image} setImage={setImage}/>
         <br />
-          <Button type="submit" className="create">Click to Submit</Button>
-          <Button type='reset' className="close" onClick={handleSubmit}>Close</Button>
+          <button type="submit" className="create">Click to Submit</button>
+          <button type='reset' className='close' onClick={handleSubmit}>Close</button>
         </Form>
       </ModalBody>
     </Modal>
