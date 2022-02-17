@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-  Button,
-  Collapse,
-  Navbar,
-  h1,
-  NavbarToggler,
-  Nav,
-  NavItem,
-} from "reactstrap";
+import { Collapse, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
 import fireLogger from "../../Assets/fireLogger.png";
 
 const Sitebar = (props) => {

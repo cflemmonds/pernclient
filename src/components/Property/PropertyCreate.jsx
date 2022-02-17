@@ -54,7 +54,7 @@ const PropertyCreate = (props) => {
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
-            <option>Choose a Category</option>
+            <option>Category</option>
             <option value="Electronics">Electronics</option>
             <option value="Jewelry">Jewelry</option>
             <option value="Furs">Furs</option>
@@ -67,34 +67,49 @@ const PropertyCreate = (props) => {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
+
           <Input
             type="text"
             placeholder="Year"
             value={year}
             onChange={(e) => setYear(e.target.value)}
           />
+
           <Input
             type="text"
             placeholder="Model"
             value={model}
             onChange={(e) => setModel(e.target.value)}
           />
+
           <Input
             type="text"
             placeholder="Serial Number"
             value={serial}
             onChange={(e) => setSerial(e.target.value)}
           />
+
+
           <Input
             type="text"
             placeholder="Value"
             value={value}
             onChange={(e) => setValue(e.target.value)}
           />
+
+
+        {/* <Input
+          type="text"
+          placeholder="Image"
+          value={imgURL}
+          onChange={(e) => setImgURL(e.target.value)}
+        /> */}
+
+
         <Uploading image={image} setImage={setImage}/>
         <br />
-          <Button type="submit">Click to Submit</Button>
-          <Button type='reset' onClick={handleSubmit}>Close</Button>
+          <Button type="submit" className="create">Click to Submit</Button>
+          <Button type='reset' className="close" onClick={handleSubmit}>Close</Button>
         </Form>
       </ModalBody>
     </Modal>

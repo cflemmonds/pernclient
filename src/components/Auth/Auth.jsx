@@ -5,7 +5,7 @@ import Signup from "./Signup";
 const Auth = (props) => {
   return (
     <div>
-      <h1 className="title">FireLogger</h1>
+      <h1 className="spltitle">FireLogger</h1>
       
 
 
