@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input, Button, Form, Modal, ModalHeader, ModalBody } from "reactstrap";
+import { Input, Form, Modal, ModalHeader, ModalBody } from "reactstrap";
 import Uploading from "../../Uploading";
 
 const PropertyCreate = (props) => {
@@ -50,11 +50,10 @@ const PropertyCreate = (props) => {
         <Form onSubmit={handleSubmit}>
           <Input
             type="select"
-            placeholder="Category of Property"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
-            <option>Category</option>
+            <option value="" disabled selected>Choose a Category</option>
             <option value="Electronics">Electronics</option>
             <option value="Jewelry">Jewelry</option>
             <option value="Furs">Furs</option>
@@ -67,45 +66,30 @@ const PropertyCreate = (props) => {
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
-
           <Input
             type="text"
             placeholder="Year"
             value={year}
             onChange={(e) => setYear(e.target.value)}
           />
-
           <Input
             type="text"
             placeholder="Model"
             value={model}
             onChange={(e) => setModel(e.target.value)}
           />
-
           <Input
             type="text"
             placeholder="Serial Number"
             value={serial}
             onChange={(e) => setSerial(e.target.value)}
           />
-
-
           <Input
             type="text"
             placeholder="Value"
             value={value}
             onChange={(e) => setValue(e.target.value)}
           />
-
-
-        {/* <Input
-          type="text"
-          placeholder="Image"
-          value={imgURL}
-          onChange={(e) => setImgURL(e.target.value)}
-        /> */}
-
-
         <Uploading image={image} setImage={setImage}/>
         <br />
           <button type="submit" className="create">Click to Submit</button>

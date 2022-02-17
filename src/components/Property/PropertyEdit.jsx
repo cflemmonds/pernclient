@@ -56,7 +56,7 @@ const PropertyEdit = (props) => {
               value={editCat}
               onChange={(e) => setEditCat(e.target.value)}
             >
-              <option>Choose a Category</option>
+              <option value="" disabled selected>Choose a Category</option>
               <option value="Electronics">Electronics</option>
               <option value="Jewelry">Jewelry</option>
               <option value="Furs">Furs</option>
