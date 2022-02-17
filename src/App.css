@@ -100,6 +100,16 @@ tr:nth-child(even) {
   width: 99%;
 }
 
+.image {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
+.upimage {
+  width: 100px;
+  height: 100px;
+}
+
 .delete {
   background-color: black;
   font-weight: bold;

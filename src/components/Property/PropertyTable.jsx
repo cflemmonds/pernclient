@@ -21,7 +21,7 @@ const PropertyTable = (props) => {
           <td>{property.year}</td>
           <td>{property.model}</td>
           <td>{property.serial}</td>
-          <td>{property.imageURL}</td>
+          <td><img src={property.imgURL} className='image' alt="property"/></td>
           <td>{property.value}</td>
           <td className="btns">
             <button

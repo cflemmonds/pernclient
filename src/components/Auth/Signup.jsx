@@ -40,7 +40,6 @@ const Signup = (props) => {
         <br />
         <input
           type="text"
-          id="firstName"
           placeholder="Enter your legal first name"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
@@ -51,7 +50,6 @@ const Signup = (props) => {
         <input
           type="text"
           id="lastName"
-          value={lastName}
           placeholder="Enter your legal last name"
           onChange={(e) => setLastName(e.target.value)}
         />
@@ -60,7 +58,6 @@ const Signup = (props) => {
         <br />
         <input
           type="email"
-          id="email"
           value={email}
           placeholder="Enter an email address"
           onChange={(e) => setEmail(e.target.value)}
@@ -70,7 +67,6 @@ const Signup = (props) => {
         <br />
         <input
           type="password"
-          id="password"
           value={password}
           placeholder="Enter a password"
           onChange={(e) => setPassword(e.target.value)}

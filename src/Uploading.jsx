@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Container, FormGroup, Input } from 'reactstrap';
 
 const Uploading = (props) => {
-const [image, setImage] = useState(props);
+const {image, setImage} = props
 const [loading, setLoading] = useState(false);
 
 const UploadImage = async(e) => {
@@ -18,6 +18,7 @@ const UploadImage = async(e) => {
         }
     )
     const File = await res.json();
+    console.log(File.secure_url)
     setImage(File.secure_url)
     setLoading(false)
 }
@@ -25,12 +26,12 @@ const UploadImage = async(e) => {
     return ( 
     <div>
         <Container>
-            <h4>Upload your file</h4>
+            <h1>Upload your file</h1>
             <FormGroup>
                 <Input type="file" name="image" placeholder="Upload image here" onChange={UploadImage}/>
                 <br />
-                {loading ? (<h3>Loading...</h3>): <img src={image} alt='item' style={{width: '10vw', height: '10vh'}}/>}
-            </FormGroup> 
+                {loading ? (<h3>Loading...</h3>): <img src={image} className='upimage'alt='property'/>}
+            </FormGroup>
         </Container>
         
     </div> );
