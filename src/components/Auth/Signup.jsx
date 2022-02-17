@@ -10,7 +10,7 @@ const Signup = (props) => {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch(`${APIURL}/register`, {
+    fetch(`${APIURL}/user/register`, {
       method: "POST",
       body: JSON.stringify({ firstName, lastName, email, password }),
       headers: new Headers({

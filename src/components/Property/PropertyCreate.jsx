@@ -14,7 +14,7 @@ const PropertyCreate = (props) => {
 
   const handleSubmit =(event) => {
     event.preventDefault();
-    fetch(`${APIURL}/create`, {
+    fetch(`${APIURL}/property/create`, {
       method: "POST",
       body: JSON.stringify({
         category: category,

@@ -5,8 +5,8 @@ switch (window.location.hostname) {
         APIURL = 'http://localhost:4000'
         break;
 
-    case 'firelogger-cf-client.herokuapp.com/':
-        APIURL = 'https://firelogger-cf-client.herokuapp.com'
+    case 'firelogger-cf-client.herokuapp.com':
+        APIURL = 'https://firelogger-app-cf.herokuapp.com'
 }
 
 export default APIURL
