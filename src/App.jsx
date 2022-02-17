@@ -10,7 +10,6 @@ const App = () => {
   const logout = () => {
     localStorage.clear();
     setSessionToken("");
-    console.log("clicked");
   };
   useEffect(() => {
     if (localStorage.getItem("token")) {
@@ -21,8 +20,7 @@ const App = () => {
   const updateLocalStorage = (newToken) => {
     localStorage.setItem("token", newToken);
     setSessionToken(newToken);
-    console.log(sessionToken);
-  };
+    };
 
   const protectedPages = () => {
     const propertys = (
