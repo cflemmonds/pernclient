@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input, Button, Form, Modal, ModalHeader, ModalBody } from "reactstrap";
+import { Input, Form, Modal, ModalHeader, ModalBody } from "reactstrap";
 import Uploading from "../../Uploading";
 
 const PropertyCreate = (props) => {
@@ -50,11 +50,10 @@ const PropertyCreate = (props) => {
         <Form onSubmit={handleSubmit}>
           <Input
             type="select"
-            placeholder="Category of Property"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
           >
-            <option>Choose a Category</option>
+            <option value="" disabled selected>Choose a Category</option>
             <option value="Electronics">Electronics</option>
             <option value="Jewelry">Jewelry</option>
             <option value="Furs">Furs</option>

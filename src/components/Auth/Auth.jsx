@@ -6,6 +6,7 @@ const Auth = (props) => {
   return (
     <div>
       <h1 className="spltitle">FireLogger</h1>
+      
       <Signup className="splash" updateLocalStorage={props.updateLocalStorage} />
       <Login className="splash" updateLocalStorage={props.updateLocalStorage} />
 

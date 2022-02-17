@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Container,
-  Row,
-  Col
-} from "reactstrap";
+import { Container,Row, Col} from "reactstrap";
 import PropertyCreate from "./PropertyCreate";
 import PropertyTable from "./PropertyTable";
 import PropertyEdit from "./PropertyEdit";

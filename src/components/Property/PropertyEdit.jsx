@@ -18,6 +18,7 @@ const PropertyEdit = (props) => {
   const [editModel, setEditModel] = useState(props.propertyToUpdate.model);
   const [editSerial, setEditSerial] = useState(props.propertyToUpdate.serial);
   const [editValue, setEditValue] = useState(props.propertyToUpdate.value);
+  const [image, setImage] = useState(props.propertyToUpdate.imgURL);
 
   const propertyUpdate = (event, property) => {
     event.preventDefault();
@@ -29,7 +30,7 @@ const PropertyEdit = (props) => {
         year: editYear,
         model: editModel,
         serial: editSerial,
-        imgURL: props.image,
+        imgURL: image,
         value: editValue,
       }),
       headers: new Headers({
@@ -55,7 +56,7 @@ const PropertyEdit = (props) => {
               value={editCat}
               onChange={(e) => setEditCat(e.target.value)}
             >
-              <option>Choose a Category</option>
+              <option value="" disabled selected>Choose a Category</option>
               <option value="Electronics">Electronics</option>
               <option value="Jewelry">Jewelry</option>
               <option value="Furs">Furs</option>
@@ -108,7 +109,7 @@ const PropertyEdit = (props) => {
               onChange={(e) => setEditValue(e.target.value)}
             ></Input>
           </FormGroup>
-            <Uploading/>
+          <Uploading image={image} setImage={setImage}/>
             <br />
           <Button className='update' type="submit">Update</Button>
           <Button className='close' type='reset' onClick={propertyUpdate}>Close</Button>
