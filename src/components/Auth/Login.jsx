@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import APIURL from "../../helpers/environment";
+
 
 const Login = (props) => {
   const [email, setEmail] = useState("");
@@ -6,7 +8,7 @@ const Login = (props) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("http://localhost:4000/user/login", {
+    fetch(`${APIURL}/login`, {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: new Headers({

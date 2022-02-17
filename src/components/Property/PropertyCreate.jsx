@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Input, Form, Modal, ModalHeader, ModalBody } from "reactstrap";
+import APIURL from "../../helpers/environment";
 import Uploading from "../../Uploading";
 
 const PropertyCreate = (props) => {
@@ -13,7 +14,7 @@ const PropertyCreate = (props) => {
 
   const handleSubmit =(event) => {
     event.preventDefault();
-    fetch("http://localhost:4000/property/create", {
+    fetch(`${APIURL}/create`, {
       method: "POST",
       body: JSON.stringify({
         category: category,

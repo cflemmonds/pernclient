@@ -4,6 +4,7 @@ import PropertyCreate from "./PropertyCreate";
 import PropertyTable from "./PropertyTable";
 import PropertyEdit from "./PropertyEdit";
 import Sitebar from "../../site/navbar/Navbar";
+import APIURL from "../../helpers/environment";
 
 const PropertyIndex = (props) => {
   const [property, setProperty] = useState([]);
@@ -11,7 +12,7 @@ const PropertyIndex = (props) => {
   const [propertyToUpdate, setPropertyToUpdate] = useState({});
   const [createActive, setCreateActive] = useState(false);
   const fetchProperty = () => {
-    fetch("http://localhost:4000/property/ownerID", { 
+    fetch(`${APIURL}/ownerID`, { 
       method: "GET",
       headers: new Headers({
         "Content-Type": "application/json",

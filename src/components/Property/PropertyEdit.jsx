@@ -9,6 +9,7 @@ import {
   ModalHeader,
   ModalBody,
 } from "reactstrap";
+import APIURL from "../../helpers/environment";
 import Uploading from "../../Uploading";
 
 const PropertyEdit = (props) => {
@@ -22,7 +23,7 @@ const PropertyEdit = (props) => {
 
   const propertyUpdate = (event, property) => {
     event.preventDefault();
-    fetch(`http://localhost:4000/property/${props.propertyToUpdate.id}`, {
+    fetch(`${APIURL}/property/${props.propertyToUpdate.id}`, {
       method: "PUT",
       body: JSON.stringify({
         category: editCat,

@@ -1,9 +1,10 @@
 import React from "react";
 import { Table } from "reactstrap";
+import APIURL from "../../helpers/environment";
 
 const PropertyTable = (props) => {
   const deleteProperty = (property) => {
-    fetch(`http://localhost:4000/property/${property.id}`, {
+    fetch(`${APIURL}/property/${property.id}`, {
       method: "DELETE",
       headers: new Headers({
         "Content-Type": "application/json",
