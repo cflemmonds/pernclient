@@ -9,6 +9,7 @@ import {
   ModalHeader,
   ModalBody,
 } from "reactstrap";
+import Uploading from "../../Uploading";
 
 const PropertyEdit = (props) => {
   const [editCat, setEditCat] = useState(props.propertyToUpdate.category);
@@ -16,13 +17,8 @@ const PropertyEdit = (props) => {
   const [editYear, setEditYear] = useState(props.propertyToUpdate.year);
   const [editModel, setEditModel] = useState(props.propertyToUpdate.model);
   const [editSerial, setEditSerial] = useState(props.propertyToUpdate.serial);
-  const [editImgURL, setEditImgURL] = useState(props.propertyToUpdate.imgURL);
   const [editValue, setEditValue] = useState(props.propertyToUpdate.value);
-//   const [isOpen, setIsOpen] = useState(false);
-//   const toggle = () => {
-//     let newIsOpen = !isOpen;
-//     setIsOpen(newIsOpen);
-//   };
+
   const propertyUpdate = (event, property) => {
     event.preventDefault();
     fetch(`http://localhost:4000/property/${props.propertyToUpdate.id}`, {
@@ -33,7 +29,7 @@ const PropertyEdit = (props) => {
         year: editYear,
         model: editModel,
         serial: editSerial,
-        imgURL: editImgURL,
+        imgURL: props.image,
         value: editValue,
       }),
       headers: new Headers({
@@ -59,6 +55,7 @@ const PropertyEdit = (props) => {
               value={editCat}
               onChange={(e) => setEditCat(e.target.value)}
             >
+              <option>Choose a Category</option>
               <option value="Electronics">Electronics</option>
               <option value="Jewelry">Jewelry</option>
               <option value="Furs">Furs</option>
@@ -103,15 +100,6 @@ const PropertyEdit = (props) => {
             ></Input>
           </FormGroup>
           <FormGroup>
-            <Label htmlFor="imgURL">Edit Image:</Label>
-            <Input
-              type="text"
-              name="imgURL"
-              value={editImgURL}
-              onChange={(e) => setEditImgURL(e.target.value)}
-            ></Input>
-          </FormGroup>
-          <FormGroup>
             <Label htmlFor="value">Edit Value:</Label>
             <Input
               type="text"
@@ -120,6 +108,8 @@ const PropertyEdit = (props) => {
               onChange={(e) => setEditValue(e.target.value)}
             ></Input>
           </FormGroup>
+            <Uploading/>
+            <br />
           <Button className='update' type="submit">Update</Button>
           <Button className='close' type='reset' onClick={propertyUpdate}>Close</Button>
         </Form>
