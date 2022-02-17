@@ -5,17 +5,10 @@ import Signup from "./Signup";
 const Auth = (props) => {
   return (
     <div>
-      <h1 className="title">FireLogger</h1>
-      
+      <h1 className="spltitle">FireLogger</h1>
+      <Signup className="splash" updateLocalStorage={props.updateLocalStorage} />
+      <Login className="splash" updateLocalStorage={props.updateLocalStorage} />
 
-
-
-      <div className="splash">
-      <Signup updateLocalStorage={props.updateLocalStorage} />
-
-
-      <Login updateLocalStorage={props.updateLocalStorage} />
-    </div>
     </div>
   );
 };

@@ -40,14 +40,14 @@ const Login = (props) => {
         <br />
         <input
         placeholder="Password"
-          type="text"
+          type="password"
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           name="password"
         />
         <br />
-        <button type="submit" onClick={handleSubmit}>
+        <button type="submit" className='login' onClick={handleSubmit}>
           Login
         </button>
       </form>

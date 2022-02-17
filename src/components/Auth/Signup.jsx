@@ -69,7 +69,7 @@ const Signup = (props) => {
         <label htmlFor="password">Password</label>
         <br />
         <input
-          type="text"
+          type="password"
           id="password"
           value={password}
           placeholder="Enter a password"
@@ -77,7 +77,7 @@ const Signup = (props) => {
           minLength={5}
         />
         <br />
-        <button type="submit" onSubmit={handleSubmit, ValidateEmail}>Submit Signup</button>
+        <button type="submit" className='signup' onSubmit={handleSubmit, ValidateEmail}>Submit Signup</button>
       </form>
     </div>
   );
