@@ -8,11 +8,10 @@ const Signup = (props) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(firstName, lastName, email, password);
 
-    fetch('http://localhost:4000/user/register', {
+    fetch("http://localhost:4000/user/register", {
       method: "POST",
-      body: JSON.stringify ({firstName, lastName, email, password}),
+      body: JSON.stringify({ firstName, lastName, email, password }),
       headers: new Headers({
         "Content-Type": "application/json",
       }),
@@ -38,6 +37,7 @@ const Signup = (props) => {
       <h1>Signup</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="firstName">First Name</label>
+        <br />
         <input
           type="text"
           id="firstName"
@@ -47,6 +47,7 @@ const Signup = (props) => {
         />
         <br />
         <label htmlFor="lastName">Last Name</label>
+        <br />
         <input
           type="text"
           id="lastName"
@@ -56,6 +57,7 @@ const Signup = (props) => {
         />
         <br />
         <label htmlFor="email">Email</label>
+        <br />
         <input
           type="email"
           id="email"
@@ -65,8 +67,9 @@ const Signup = (props) => {
         />
         <br />
         <label htmlFor="password">Password</label>
+        <br />
         <input
-          type="text"
+          type="password"
           id="password"
           value={password}
           placeholder="Enter a password"
@@ -74,7 +77,7 @@ const Signup = (props) => {
           minLength={5}
         />
         <br />
-        <button type="submit" onSubmit={handleSubmit, ValidateEmail}>Submit Signup</button>
+        <button type="submit" className='signup' onSubmit={handleSubmit, ValidateEmail}>Submit Signup</button>
       </form>
     </div>
   );
