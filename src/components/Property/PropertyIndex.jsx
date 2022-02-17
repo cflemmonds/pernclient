@@ -2,14 +2,7 @@ import React, { useState, useEffect } from "react";
 import {
   Container,
   Row,
-  Col,
-  Button,
-  Collapse,
-  Navbar,
-  NavbarBrand,
-  NavbarToggler,
-  Nav,
-  NavItem,
+  Col
 } from "reactstrap";
 import PropertyCreate from "./PropertyCreate";
 import PropertyTable from "./PropertyTable";

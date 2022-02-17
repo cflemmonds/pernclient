@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import {
-  Button,
   Collapse,
   Navbar,
-  h1,
   NavbarToggler,
   Nav,
   NavItem,
