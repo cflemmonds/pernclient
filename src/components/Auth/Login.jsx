@@ -16,7 +16,6 @@ const Login = (props) => {
       .then((res) => res.json())
       .then((data) => {
         props.updateLocalStorage(data.sessionToken);
-        console.log(data);
       })
 
       .catch((err) => console.error(err));
@@ -25,12 +24,11 @@ const Login = (props) => {
     <div>
       <form>
         <h1>Login</h1>
-        <br />
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">Email Address</label>
         <br />
         <input
+        placeholder="Email Address"
           type="text"
-          id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           name="email"
@@ -40,14 +38,14 @@ const Login = (props) => {
         <label htmlFor="password">Password</label>
         <br />
         <input
-          type="text"
-          id="password"
+        placeholder="Password"
+          type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           name="password"
         />
         <br />
-        <button type="submit" onClick={handleSubmit}>
+        <button type="submit" className="login" onClick={handleSubmit}>
           Login
         </button>
       </form>

@@ -30,7 +30,7 @@ const UploadImage = async(e) => {
             <FormGroup>
                 <Input type="file" name="image" placeholder="Upload image here" onChange={UploadImage}/>
                 <br />
-                {loading ? (<h3>Loading...</h3>): <img src={image} style={{width: "300px"}}/>}
+                {loading ? (<h3>Loading...</h3>): <img src={image} className='upimage'alt='property'/>}
             </FormGroup>
         </Container>
         
