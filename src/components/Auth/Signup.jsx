@@ -74,7 +74,7 @@ const Signup = (props) => {
           minLength={5}
         />
         <br />
-        <button type="submit" className='signup' onSubmit={handleSubmit, ValidateEmail}>Submit Signup</button>
+        <button type="submit" className='signup' onSubmit={(handleSubmit, ValidateEmail)}>Submit Signup</button>
       </form>
     </div>
   );
