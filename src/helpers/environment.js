@@ -6,7 +6,7 @@ switch (window.location.hostname) {
         break;
 
     case 'firelogger-cf-client.herokuapp.com':
-        APIURL = 'https://firelogger-app-cf.herokuapp.com'
+        APIURL = 'https://pernserver.up.railway.app'
 }
 
 export default APIURL
