@@ -5,8 +5,8 @@ switch (window.location.hostname) {
         APIURL = 'http://localhost:4000'
         break;
 
-    case 'pernclient-production.up.railway.app':
-        APIURL = 'https://pernserver.up.railway.app'
+    case 'firelogger-cf-client.herokuapp.com':
+        APIURL = 'https://firelogger-cf-client.herokuapp.com/'
 }
 
 export default APIURL
